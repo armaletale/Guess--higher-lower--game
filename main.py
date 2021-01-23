@@ -51,12 +51,14 @@ def game():
         print(f"You're right! Current score: {count}.")
       else:
         should_continue = False
+        print(f"Sorry, that's wrong. Final score: {count}")
     else:
       if b_followers_count > a_followers_count:
         count += 1
         print(f"You're right! Current score: {count}.")
       else:
         should_continue = False
+        print(f"Sorry, that's wrong. Final score: {count}")
 
 
 game()
