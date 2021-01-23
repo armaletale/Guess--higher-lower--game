@@ -1,6 +1,7 @@
 import random
 from art import logo, vs
 from game_data import data
+from replit import clear
 
 def random_acount():
   random_entry = random.choice(data)
@@ -15,8 +16,8 @@ def acount_data(acount):
   name = acount["name"]
   description = acount["description"]
   country = acount["country"]
-  follow = acount["follower_count"]
-  return f"{name}, a {description}, from {country}, {follow}"
+  # follow = acount["follower_count"]
+  return f"{name}, a {description}, from {country},"
 
 
 
@@ -46,6 +47,7 @@ def game():
     b_followers_count = b["follower_count"]
 
     if guess == "a":
+      clear()
       if a_followers_count > b_followers_count:
         count += 1
         print(f"You're right! Current score: {count}.")
@@ -53,6 +55,7 @@ def game():
         should_continue = False
         print(f"Sorry, that's wrong. Final score: {count}")
     else:
+      clear()
       if b_followers_count > a_followers_count:
         count += 1
         print(f"You're right! Current score: {count}.")
